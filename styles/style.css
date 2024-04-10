@@ -1,0 +1,454 @@
+/* Root custom properties for color scheme and common values */
+:root {
+    --primary-color: #CFAD60; /* Gold */
+    --text-color: #333; /* Dark grey */
+    --background-color: #f5f5f5; /* Light grey */
+    --text-light: #666; /* Light grey for text */
+    --footer-background: #000; /* Black */
+    --hover-gold: #b99a4c; /* Darker shade of gold */
+    --gradient-light: #FDEB71;  /* Or clair pour le gradient */
+    --gradient-dark: var(--primary-color);  /* Utilise la couleur dorée principale */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.75;
+}
+
+.top-container, .middle-container, .bottom-container {
+    padding: 5rem 1rem;
+}
+
+/* Styles pour la Section Héroïque */
+#hero {
+    background-image: linear-gradient(to right, var(--gradient-light), var(--gradient-dark));
+    color: white;
+    padding: 5% 0; /* Augmente l'espacement pour un impact visuel plus fort */
+    text-align: center;
+    background-attachment: fixed; /* Effet de parallaxe léger pour le fond */
+    background-size: cover;
+}
+
+#hero h1 {
+    margin-bottom: 0.5em; /* Espacement entre le h1 et le h2 */
+    font-size: 2.5rem; /* Taille de police plus grande pour le titre */
+    font-weight: bold; /* Police en gras pour plus d'impact */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre portée pour améliorer la lisibilité sur le dégradé */
+}
+
+#hero h2 {
+    font-size: 1.8rem; /* Taille de police ajustée pour le sous-titre */
+    font-weight: lighter; /* Police plus légère pour une hiérarchie visuelle */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.Ing {
+    color: white; /* Changement pour uniformiser la couleur du texte */
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour faire ressortir le texte */
+    padding: 0.2em 0.4em; /* Espacement interne autour du texte */
+    border-radius: 5px; /* Bordures arrondies pour le fond du texte */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Ombre portée pour un effet de profondeur */
+}
+
+/* Resume Section Styles */
+#resume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    min-height: 100vh;
+    padding: 1%;
+}
+
+.profile {
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    will-change: transform;
+}
+
+.profile:hover {
+    transform: scale(1.05);
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    border: 3px solid var(--primary-color);
+    object-fit: cover;
+    animation: popIn 0.5s ease forwards;
+}
+
+.profileH {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.profileP {
+    font-size: 1rem; /* Increased for readability */
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Experience Section Styles */
+#Experience {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 2rem 0;
+}
+
+.Experiencecls {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+.Experiencecls > h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.keosexperience, .hmrexperience {
+    display: flex;
+    margin-bottom: 2rem;
+    align-items: center; /* Aligns items vertically */
+    gap: 20px; /* Adds space between image and text */
+}
+
+.imgkeospart, .imghmr {
+    flex-basis: 20%; /* Assigns a base size for the image container */
+    text-align: center; /* Centers the image */
+}
+
+.imgkeospart img, .imghmr img {
+    width: 100%; /* Makes the image responsive */
+    max-width: 120px; /* Limits the image size */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Rounds the corners of the images */
+}
+
+.keosexperiencetxtcls, .hmrexperiencetxtcls {
+    flex-basis: 80%;
+}
+
+.keosH, .hmrH {
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+}
+
+.keosH4, .hmrH4 {
+    margin: 0.25rem 0;
+    font-weight: normal;
+    color: var(--text-color);
+}
+
+.keosP, .hmrP {
+    color: var(--text-light);
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .keosexperience, .hmrexperience {
+        flex-direction: column; /* Stacks image and text on small screens */
+        text-align: center;
+    }
+
+    .imgkeospart, .imghmr {
+        flex-basis: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .keosexperiencetxtcls, .hmrexperiencetxtcls {
+        flex-basis: 100%;
+    }
+}
+
+/* Projects Section Styles */
+#Projects {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 2rem 0;
+}
+
+.Projectscls {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+.Projectscls > h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.developementcls, .aicls {
+    display: flex;
+    margin-bottom: 2rem;
+    align-items: center; /* Aligns items vertically in the center */
+    gap: 20px; /* Adds space between the image and the text */
+}
+
+.devlopimg, .aiimg {
+    flex-basis: 20%; /* Assigns a base size for the image container */
+    text-align: center; /* Centers the image */
+}
+
+.devlopimg img, .aiimg img {
+    width: 100%; /* Makes the image responsive */
+    max-width: 120px; /* Limits the image size to not overpower the text */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Adds a modern, rounded look to the images */
+}
+
+.webdevelopingtxt, .aidevelopingtxt {
+    flex-basis: 80%;
+}
+
+.developementH, .aidevelopingH {
+    color: var(--primary-color); /* Highlights the titles in your primary gold color */
+    margin: 0.5rem 0;
+}
+
+.developementP, .aidevelopingP {
+    color: var(--text-light); /* Ensures the paragraphs are readable but softer than the titles */
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .developementcls, .aicls {
+        flex-direction: column; /* Stacks the image above the text on smaller screens */
+        text-align: center;
+    }
+
+    .devlopimg, .aiimg {
+        flex-basis: 100%; /* Allows the image to take the full width of its container */
+        margin-bottom: 1rem; /* Adds space between the image and the text */
+    }
+
+    .webdevelopingtxt, .aidevelopingtxt {
+        flex-basis: 100%; /* Allows the text to take the full width below the image */
+    }
+}
+
+
+footer {
+    background-color: var(--footer-background);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+hr {
+    border: 0; /* Supprime la bordure par défaut */
+    height: 2px; /* Épaisseur du séparateur */
+    background-image: linear-gradient(to right, transparent, var(--primary-color), transparent); /* Gradient avec la couleur principale */
+    margin: 40px auto; /* Espacement autour du hr */
+    width: 80%; /* Largeur du hr */
+}
+
+
+.btn {
+    background-color: var(--primary-color) !important;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    border: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover, .btn:focus, .btn:active {
+    background-color: var(--hover-gold) !important;
+    color: white;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(207, 173, 96, 0.5);
+}
+
+/* Keyframes for animations */
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    #hero {
+        padding: 20px 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .profile {
+        max-width: 50%;
+    }
+}
+
+/* About Me Section Styles */
+#about {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 2rem 0;
+}
+
+.aboutcls {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+.aboutcls > h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.techcls, .sprtcls {
+    display: flex;
+    margin-bottom: 2rem;
+    align-items: center; /* Ensures content is aligned in the middle vertically */
+    gap: 20px; /* Adds space between the image and the text sections */
+}
+
+.techimg, .sprtimg {
+    flex-basis: 20%; /* Sets a base size for the image container */
+    text-align: center; /* Centers the image within its container */
+}
+
+.techimg img, .sprtimg img {
+    width: 100%; /* Makes the image responsive */
+    max-width: 150px; /* Restricts the image size for balance */
+    height: auto; /* Maintains the image's aspect ratio */
+    border-radius: 10px; /* Adds rounded corners for a modern look */
+}
+
+.techtxt, .sporttxt {
+    flex-basis: 80%;
+}
+
+.techH, .sportH {
+    color: var(--primary-color); /* Uses the primary gold color for subheadings */
+    margin: 0.5rem 0;
+}
+
+.techP, .sportP {
+    color: var(--text-light); /* Lighter text color for the paragraphs */
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .techcls, .sprtcls {
+        flex-direction: column; /* Stacks image and text vertically on smaller screens */
+        text-align: center;
+    }
+
+    .techimg, .sprtimg {
+        flex-basis: 100%; /* Allows the image to take full width of its container */
+        margin-bottom: 1rem; /* Adds space between the image and the text */
+    }
+
+    .techtxt, .sporttxt {
+        flex-basis: 100%; /* Allows the text to take full width below the image */
+    }
+}
+
+#contact {
+    background-color: var(--background-color); /* Utilise le gris clair pour le fond */
+    color: var(--text-color); /* Texte en gris foncé pour le contraste */
+    padding: 40px 0; /* Espacement vertical */
+    text-align: center; /* Centre le contenu */
+}
+
+.contactcls {
+    max-width: 600px; /* Limite la largeur du contenu pour la lisibilité */
+    margin: auto; /* Centre le bloc dans la section */
+    padding: 20px; /* Espacement interne */
+    background-color: white; /* Fond blanc pour faire ressortir le bloc de contact */
+    border-radius: 15px; /* Bordures arrondies pour un look moderne */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Ombre légère pour la profondeur */
+}
+
+.contactH, .contactH3 {
+    color: var(--primary-color); /* Titres en doré */
+    margin-bottom: 15px; /* Espacement après les titres */
+}
+
+.contactP {
+    color: var(--text-light); /* Paragraphe en gris plus clair pour la douceur */
+    margin-bottom: 20px; /* Espacement avant le bouton */
+}
+
+.contactbtn {
+    background-color: var(--primary-color); /* Bouton doré */
+    color: white; /* Texte du bouton en blanc */
+    padding: 10px 20px; /* Dimensionnement du bouton */
+    border-radius: 5px; /* Bordures arrondies du bouton */
+    text-decoration: none; /* Supprime le soulignement du lien */
+    transition: background-color 0.3s; /* Transition douce pour l'effet de survol */
+}
+
+.contactbtn:hover {
+    background-color: var(--hover-gold); /* Changement de couleur au survol */
+}
+
+/* Footer Styles*/
+
+.bottom-container {
+    background-color: var(--footer-background); /* Utilisez le noir ou une autre couleur de votre choix */
+    color: white; /* Couleur du texte */
+}
+
+footer {
+    padding: 20px;
+    text-align: center; /* Centre le contenu du pied de page */
+}
+
+footer p {
+    margin: 10px 0; /* Ajoute un peu d'espace autour du texte */
+    font-size: 16px; /* Taille du texte */
+}
+
+footer a {
+    color: white; /* Couleur des icônes et du texte des liens */
+    margin: 0 15px; /* Espacement entre les icônes */
+    transition: color 0.3s ease; /* Animation douce pour le changement de couleur */
+}
+
+footer a:hover, footer a:focus {
+    color: var(--primary-color); /* Change la couleur au survol ou au focus */
+    text-decoration: none; /* Enlève le soulignement des liens */
+}
+
+/* Style pour les icônes Font Awesome */
+i.fab, i.fas {
+    font-size: 24px; /* Taille des icônes */
+}
